@@ -1,20 +1,51 @@
 import { FC } from "react";
-import Burger from "@/components/Burger";
-import styles from "./Sidebar.module.scss";
-import { useTypedSelector } from "@/hooks/useTypedSelector";
 import { selectSidebar } from "@/store/reducers/sidebar/selectors";
+import { useTypedSelector } from "@/hooks/useTypedSelector";
+import Burger from "@/components/Burger";
+import TextField from "@/components/UI/TextField";
+import styles from "./Sidebar.module.scss";
+import { links } from "./Sidebar.constans";
+import SidebarLink from "../SidebarLink";
+import SidebarSublinks from "../SidebarSublinks";
+
+export interface ILink {
+    icon: any;
+    title: string;
+    href: string;
+    subLinks?: ILink[];
+}
 
 const Sidebar: FC = () => {
-    const { show } = useTypedSelector(selectSidebar);
+    const { active } = useTypedSelector(selectSidebar);
 
-    const sidebarShow = show ? styles.sidebar_active : null
+    const sidebarShow = active ? styles.sidebar_active : null
+
+    const items = links.map((link, index) => { // намеренно использую index в качестве ключа, потому-что список не будет видоизменяться
+
+        if (link.subLinks) {
+            return <SidebarSublinks link={link} key={'sublist'} title={link.title} />
+        }
+
+        return (
+            <li key={index}>
+                <SidebarLink
+                    className={styles.link}
+                    href={link.href}
+                    icon={link.icon}
+                >
+                    {link.title}
+                </SidebarLink>
+            </li>
+        )
+    })
 
     return (
         <aside className={`${styles.sidebar} ${sidebarShow}`}>
-            <Burger className={styles.burger} />
+            <Burger className={`${styles.burger} ${active ? styles.burger_active : null}`} />
             <div className={styles.content}>
-                <h3 className={styles.title}>Меню</h3>
+                <TextField textStyle={'sidebarLink'}>Меню</TextField>
                 <ul className={styles.list}>
+                    {items}
                 </ul>
             </div>
         </aside>

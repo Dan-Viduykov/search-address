@@ -1,3 +1,3 @@
 export interface sidebarState {
-    show: boolean
+    active: boolean
 }

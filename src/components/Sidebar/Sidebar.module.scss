@@ -6,6 +6,7 @@
     background: rgba($white, 0.05);
     box-shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
     transition: .4s;
+    overflow-y: auto;
 
     @include display(768px) {
         position: fixed;
@@ -18,23 +19,31 @@
 }
 
 .burger {
-    position: absolute;
     width: 50px;
-    left: 350px;
+    height: 50px;
+    display: none;
+    position: fixed;
+    left: 320px;
+    transition: .4s;
+    
+    @include display(768px) {
+        display: flex;
+        left: 30px;
+
+        &_active {
+            top: 70px;
+            left: 240px;
+        }
+    }
 }
 
 .content {
     padding: 24px 32px;
 }
 
-.title {
-
-}
-
 .list {
-
+    margin-top: 36px;
 }
 
-.item {
-
+.link {
 }

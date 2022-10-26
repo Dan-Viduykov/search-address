@@ -1,4 +1,7 @@
-import { FC, useState } from "react";
+import { useActions } from "@/hooks/useActions";
+import { useTypedSelector } from "@/hooks/useTypedSelector";
+import { selectSidebar } from "@/store/reducers/sidebar/selectors";
+import { FC } from "react";
 import styles from "./Burger.module.scss";
 
 interface BurgerProps {
@@ -6,13 +9,12 @@ interface BurgerProps {
 }
 
 const Burger: FC<BurgerProps> = ({ className }) => {
-    const [ active, setActive ] = useState(false);
+    const { active } = useTypedSelector(selectSidebar);
+    const { setActive } = useActions();
 
     const handleClick = () => {
-        setActive(old => !old);
+        setActive(!active)
     }
-
-    // this.setAttribute('aria-expanded', this.classList.contains('opened'))
 
     const classOpen = active ? styles.opened : null
 
