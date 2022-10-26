@@ -1,8 +1,11 @@
+import Layout from "@/components/Layout";
 import { NextPage } from "next"
 
 const Home: NextPage = () => {
   return (
-    <div>Home</div>
+    <Layout>
+      Home
+    </Layout>
   )
 }
 

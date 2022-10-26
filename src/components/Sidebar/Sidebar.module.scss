@@ -1,0 +1,40 @@
+@import '@/styles/main.scss';
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    background: rgba($white, 0.05);
+    box-shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
+    transition: .4s;
+
+    @include display(768px) {
+        position: fixed;
+        margin-left: -300px;
+    }
+}
+
+.sidebar_active {
+    margin-left: 0;
+}
+
+.burger {
+    position: absolute;
+    width: 50px;
+    left: 350px;
+}
+
+.content {
+    padding: 24px 32px;
+}
+
+.title {
+
+}
+
+.list {
+
+}
+
+.item {
+
+}

@@ -1,0 +1,12 @@
+@import '@/styles/main.scss';
+
+.content {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
