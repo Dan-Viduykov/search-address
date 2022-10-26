@@ -1,11 +1,13 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import Burger from "@/components/Burger";
 import styles from "./Sidebar.module.scss";
+import { useTypedSelector } from "@/hooks/useTypedSelector";
+import { selectSidebar } from "@/store/reducers/sidebar/selectors";
 
 const Sidebar: FC = () => {
-    const [ active, setActive ] = useState(false)
+    const { show } = useTypedSelector(selectSidebar);
 
-    const sidebarShow = active ? styles.sidebar_active : null
+    const sidebarShow = show ? styles.sidebar_active : null
 
     return (
         <aside className={`${styles.sidebar} ${sidebarShow}`}>
