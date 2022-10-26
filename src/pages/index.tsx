@@ -5,4 +5,6 @@ const Home: NextPage = () => {
     <div>Home</div>
   )
 }
+
+export default Home;
   
