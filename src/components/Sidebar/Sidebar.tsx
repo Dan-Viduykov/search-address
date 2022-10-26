@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { selectSidebar } from "@/store/reducers/sidebar/selectors";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
-import Burger from "@/components/Burger";
+import SidebarLink from "@/components/SidebarLink";
+import SidebarSublinks from "@/components/SidebarSublinks";
+import Burger from "@/components/UI/Burger";
 import TextField from "@/components/UI/TextField";
-import styles from "./Sidebar.module.scss";
 import { links } from "./Sidebar.constans";
-import SidebarLink from "../SidebarLink";
-import SidebarSublinks from "../SidebarSublinks";
+import styles from "./Sidebar.module.scss";
 
 export interface ILink {
     icon: any;
