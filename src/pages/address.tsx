@@ -1,9 +1,13 @@
+import Layout from "@/components/Layout";
+import SearchAddress from "@/components/screens/SearchAddress";
 import { NextPage } from "next"
 
 const Address: NextPage = () => {
   return (
-    <div>Address</div>
+    <Layout>
+      <SearchAddress />
+    </Layout>
   )
 }
-  
+
 export default Address;

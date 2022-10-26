@@ -12,6 +12,8 @@ const enum Tags {
 const enum TextTypes {
     'headerLink',
     'sidebarLink',
+    'subTitle',
+    'title',
     'base'
 }
 
