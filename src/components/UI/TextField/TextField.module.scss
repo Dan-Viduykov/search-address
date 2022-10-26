@@ -1,0 +1,28 @@
+@import '@/styles/main.scss';
+
+.text {
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headerLink {
+    color: $white;
+}
+
+.sidebarLink {
+    font-weight: 600;
+    color: $black;
+}
+
+.subTitle {
+    font-size: 26px;
+    line-height: 32px;
+    color: $black;
+}
+
+.base {
+    font-weight: 500;
+    color: $black;
+}
