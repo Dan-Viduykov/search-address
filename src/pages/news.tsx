@@ -6,3 +6,4 @@ const News: NextPage = () => {
     )
 }
   
+export default News;

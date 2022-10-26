@@ -6,3 +6,4 @@ const Address: NextPage = () => {
   )
 }
   
+export default Address;
