@@ -23,6 +23,7 @@ const SearchAddress: FC = () => {
                     onChange={setValue}
                     delay={300}
                     count={15}
+                    minChars={3}
                 />
                 <button className={styles.buttonSearch}>
                     <Image src={searchSVG} alt='' />
