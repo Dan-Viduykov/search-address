@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import Image from "next/image";
 import { AddressSuggestions, DaDataSuggestion, DaDataAddress } from 'react-dadata';
 import TextField from "@/components/UI/TextField";
-import searchSVG from '@/assets/wrench.svg'
+import searchSVG from '@/assets/search.svg'
 import styles from "./SearchAddress.module.scss";
 import 'react-dadata/dist/react-dadata.css';
 

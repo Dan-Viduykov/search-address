@@ -43,7 +43,7 @@ const Sidebar: FC = () => {
         <aside className={`${styles.sidebar} ${sidebarShow}`}>
             <Burger className={`${styles.burger} ${active ? styles.burger_active : null}`} />
             <div className={styles.content}>
-                <TextField textStyle={'sidebarLink'}>Меню</TextField>
+                <TextField textStyle={'title'}>Меню</TextField>
                 <ul className={styles.list}>
                     {items}
                 </ul>
