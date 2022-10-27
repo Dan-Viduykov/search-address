@@ -5,9 +5,8 @@ import { createWrapper } from "next-redux-wrapper";
 export function makeStore() {
     return configureStore({
         reducer: {
-            sidebarReducer
+            sidebarReducer,
         },
-        middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(),
     })
 }
 

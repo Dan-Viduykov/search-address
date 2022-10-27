@@ -7,6 +7,7 @@ import styles from "./Header.module.scss";
 import Link from "next/link";
 
 const Header: FC = () => {
+
     return (
         <header className={styles.header}>
             <Container className={styles.container}>
