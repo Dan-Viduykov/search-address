@@ -1,9 +1,13 @@
+import Layout from "@/components/Layout";
+import { default as NotFoundScreen } from "@/components/screens/NotFound";
 import { NextPage } from "next"
 
-const Address: NextPage = () => {
+const NotFount: NextPage = () => {
   return (
-    <div>404</div>
+    <Layout>
+      <NotFoundScreen />
+    </Layout>
   )
 }
-  
-export default Address;
+
+export default NotFount;
