@@ -12,6 +12,15 @@
     margin-bottom: 24px;
 }
 
+.link {
+    color: $mainColor;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .paragraph {
     margin-bottom: 24px;
 
