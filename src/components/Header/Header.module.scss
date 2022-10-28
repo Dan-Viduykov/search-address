@@ -17,6 +17,10 @@
     align-items: center;
     text-decoration: none;
 
+    &:first-child {
+        margin-right: 16px;
+    }
+
     img {
         margin-right: 24px;
 

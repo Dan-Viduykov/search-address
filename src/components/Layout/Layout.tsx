@@ -12,9 +12,9 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
     return (
         <>
             <Header />
-            <div className={`${styles.content} ${active ? styles.content_fixed : null}`}>
+            <div className={styles.content}>
                 <Sidebar />
-                <main className={styles.main}>
+                <main className={`${styles.main} ${active ? styles.main_fixed : null}`}>
                     <Container>
                         {children}
                     </Container>
