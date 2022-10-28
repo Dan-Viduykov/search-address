@@ -1,7 +1,7 @@
 import { FC } from "react";
+import Link from "next/link";
 import TextField from "@/components/UI/TextField";
 import styles from "./Home.module.scss";
-import Link from "next/link";
 
 const Home: FC = () => {
     return (
