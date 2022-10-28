@@ -27,7 +27,9 @@ const SidebarLink: FC<PropsWithChildren<SidebarLinkProps>> = (props) => {
             onClick={handleClick}
         >
             <Image className={styles.icon} src={icon} alt='' />
-            <TextField className={styles.text}>{children}</TextField>
+            <TextField className={styles.text} textStyle={'sidebarLink'}>
+                {children}
+            </TextField>
         </Link>
     )
 }

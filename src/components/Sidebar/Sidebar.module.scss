@@ -2,6 +2,7 @@
 
 .sidebar {
     min-width: 300px;
+    max-width: 340px;
     height: 100%;
     background: rgba($white, 0.05);
     box-shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
@@ -11,7 +12,8 @@
 
     @include display(768px) {
         position: fixed;
-        margin-left: -300px;
+        height: calc(100% - 80px);
+        margin-left: -100%;
         background: $white;
     }
 }

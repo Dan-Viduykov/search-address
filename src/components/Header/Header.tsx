@@ -1,10 +1,11 @@
-import Image from "next/image";
 import { FC } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Container from "@/components/Container";
+import TextField from "@/components/UI/TextField";
 import wrenchSVG from '@/assets/wrench.svg'
 import personSVG from '@/assets/person.svg'
-import Container from "@/components/Container";
 import styles from "./Header.module.scss";
-import Link from "next/link";
 
 const Header: FC = () => {
 
@@ -13,11 +14,15 @@ const Header: FC = () => {
             <Container className={styles.container}>
                 <Link href={'/'} className={styles.link}>
                     <Image src={wrenchSVG} alt='' />
-                    <h3 className={styles.title}>Wrench CRM</h3>
+                    <TextField textStyle={'headerLink'}>
+                        Wrench CRM
+                    </TextField>
                 </Link>
                 <Link href={'/user'} className={styles.link}>
                     <Image src={personSVG} alt='' />
-                    <p className={styles.userName}>Имя Фамилия</p>
+                    <TextField textStyle={'headerLink'}>
+                        Имя Фамилия
+                    </TextField>
                 </Link>
             </Container>
         </header>

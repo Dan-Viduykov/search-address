@@ -1,6 +1,7 @@
 import { FC } from "react";
 import TextField from "@/components/UI/TextField";
 import styles from "./Home.module.scss";
+import Link from "next/link";
 
 const Home: FC = () => {
     return (
@@ -41,7 +42,7 @@ const Home: FC = () => {
             </ TextField>
             <TextField className={styles.paragraph}>
                 Задача организации, в особенности же перспективное планирование, а также свежий взгляд на привычные вещи - 
-                безусловно открывает <a className={styles.link} href="#">новые горизонты</a> для анализа существующих паттернов поведения. 
+                безусловно открывает <Link className={styles.link} href="#">новые горизонты</Link> для анализа существующих паттернов поведения. 
                 Также как перспективное планирование однозначно определяет каждого участника как способного принимать собственные решения 
                 касаемо благоприятных перспектив.
             </ TextField>
