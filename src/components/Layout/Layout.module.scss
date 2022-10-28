@@ -3,6 +3,10 @@
 .content {
     display: flex;
     height: calc(100vh - 80px);
+
+    &_fixed {
+        overflow: hidden;
+    }
 }
 
 .main {
