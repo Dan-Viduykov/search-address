@@ -1,4 +1,4 @@
-import { FC, useRef } from "react";
+import { FC } from "react";
 import { selectSidebar } from "@/store/reducers/sidebar/selectors";
 import { useTypedSelector } from "@/hooks/useTypedSelector";
 import SidebarLink from "@/components/SidebarLink";
@@ -28,7 +28,7 @@ const Sidebar: FC = () => {
         setActive(false )
     }
 
-    const items = links.map((link, index) => { // намеренно использую index в качестве ключа, потому-что список не будет видоизменяться
+    const items = links.map((link, index) => {
 
         if (link.subLinks) {
             return <SidebarSublinks link={link} key={'sublist'} title={link.title} />
